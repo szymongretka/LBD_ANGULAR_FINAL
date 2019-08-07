@@ -1,0 +1,28 @@
+<h2>My Expenses</h2>
+<div class="container">
+    <button class="btn btn-success" style="width:100px" (click)="addExpense()"> Add Expense </button><br>
+    <div class="row" *ngFor="let expense of expenses">
+      <div class="col-md-3">
+        <ul class="list-group">
+          <button class="list-group-item" (click)="onSelectedExpense(expense)"> 
+              {{expense.description}},
+              {{expense.category}},
+              {{expense.amountSpent}} PLN  </button>
+              
+          <!--<a routerLink="" (click)="onSelectedExpense(expense)">  
+            {{expense.description}},
+            {{expense.category}},
+            {{expense.amountSpent}} PLN 
+          </a>-->
+        </ul>
+      </div>
+    </div>
+    
+    <div *ngIf="selectedExpense && isClicked">
+        <div class="col-md-3">
+          <label for="expenseName">Details:</label><br>
+          <input type="text" id="expenseName" [(ngModel)]="selectedExpense.description" name="expenseName">
+          <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;"> Edit</button>
+        </div>
+    </div>
+</div>

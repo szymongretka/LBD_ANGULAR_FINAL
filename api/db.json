@@ -1,0 +1,46 @@
+{
+  "expenses": [
+    {
+      "id": 1,
+      "description": "proba edytowania",
+      "amountSpent": 300,
+      "category": "Household"
+    },
+    {
+      "id": 2,
+      "description": "proba edytowania",
+      "amountSpent": 300,
+      "category": "Household"
+    },
+    {
+      "id": 3,
+      "description": "sr",
+      "amountSpent": 300,
+      "category": "Household"
+    },
+    {
+      "id": 4,
+      "description": "Sample expense description",
+      "category": "Commute",
+      "amountSpent": 400
+    },
+    {
+      "id": 5,
+      "description": "Sample expense description",
+      "category": "Commute",
+      "amountSpent": 500
+    },
+    {
+      "id": 6,
+      "description": "proba",
+      "amountSpent": 4,
+      "category": "pierwsza"
+    },
+    {
+      "id": 7,
+      "description": "drugi",
+      "amountSpent": 4,
+      "category": "ta"
+    }
+  ]
+}

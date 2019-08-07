@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "C:/Users/LBD_JAVA/Documents/Angular/lbd-angular-final/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,7 +64,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lbd-angular-final:build"
+            "browserTarget": "lbd-angular-final:build",
+            "proxyConfig": "api/proxy.conf.json"
           },
           "configurations": {
             "production": {

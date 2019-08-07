@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  
+  <input id="name" class="form-control" formControlName="name" required >
+    <div *ngIf="name.invalid && submitted" class="invalid-feedback">
+      <div *ngIf="name.errors.required">Name is required.</div> 
+    </div>
+
+    <input id="email" class="form-control" formControlName="email" required >
+    <div *ngIf="email.invalid && submitted" class="invalid-feedback">
+      <div *ngIf="email.errors.required">Email is required.</div>
+      <div *ngIf="email.errors.email">Incorrect email syntax</div>
+    </div>
+
+  <select id="country" class="form-control" formControlName="country" required>
+  <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+  <div *ngIf="country.invalid && submitted" class="invalid-feedback">
+      <div *ngIf="country.errors.required">Country is required.</div> 
+    </div>
+  </select>
+
+  <button type="submit" [disabled]="contactForm.pristine">Save</button>
+  <button type="reset" (click)="revert()" [disabled]="contactForm.pristine">
+    Revert
+  </button>
+</form>
+</div>
+</div>
+</div>
+
+
