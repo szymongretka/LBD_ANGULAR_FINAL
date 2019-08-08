@@ -1,46 +1,46 @@
 {
   "expenses": [
     {
-      "id": 1,
-      "description": "proba edytowania",
-      "amountSpent": 300,
-      "category": "Household"
-    },
-    {
-      "id": 2,
-      "description": "proba edytowania",
-      "amountSpent": 300,
-      "category": "Household"
-    },
-    {
       "id": 3,
       "description": "sr",
       "amountSpent": 300,
-      "category": "Household"
+      "category": "Household",
+      "details": "cos"
     },
     {
       "id": 4,
       "description": "Sample expense description",
       "category": "Commute",
-      "amountSpent": 400
-    },
-    {
-      "id": 5,
-      "description": "Sample expense description",
-      "category": "Commute",
-      "amountSpent": 500
+      "amountSpent": 400,
+      "details": "cos"
     },
     {
       "id": 6,
       "description": "proba",
       "amountSpent": 4,
-      "category": "pierwsza"
+      "category": "pierwsza",
+      "details": "cos"
     },
     {
       "id": 7,
       "description": "drugi",
       "amountSpent": 4,
-      "category": "ta"
+      "category": "ta",
+      "details": "cos"
+    },
+    {
+      "id": 8,
+      "description": "proba validacji",
+      "amountSpent": 4,
+      "category": "asdasd",
+      "details": ""
+    },
+    {
+      "id": 9,
+      "description": "tt",
+      "amountSpent": 5,
+      "category": "Household",
+      "details": ""
     }
   ]
 }

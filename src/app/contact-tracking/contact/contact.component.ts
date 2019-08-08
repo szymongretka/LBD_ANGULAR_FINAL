@@ -25,7 +25,6 @@ export class ContactComponent implements OnInit {
       return;
   }
 
-    // Do useful stuff with the gathered data
     console.log(result);
   }
   revert() {

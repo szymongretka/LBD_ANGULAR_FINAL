@@ -31,8 +31,8 @@ export class ExpenseService {
     return this.http.put<ExpenseAttrs>(this.baseUrl + expense.id, expense);
   }
 
-  deleteExpense(id: number): Observable<Expense[]> {
-    return this.http.delete<Expense[]>(this.baseUrl + id);
+  deleteExpense(id: number): Observable<Expense> {
+    return this.http.delete<Expense>(this.baseUrl + id);
   }
 
 

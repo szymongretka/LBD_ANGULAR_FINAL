@@ -4,18 +4,33 @@
 
           <div class="form-group">
             <label for="description">Expense description:</label>
-            <input type="text" formControlName="description" placeholder="description" name="description" class="form-control" id="description">
+            <input type="text" formControlName="description" placeholder="Description" name="description" class="form-control" id="description" required>
+            <div *ngIf="description.invalid && submitted" class="invalid-feedback">
+                <div *ngIf="description.errors.required">Description is required.</div> 
+              </div>
           </div>
           
           <div class="form-group">
                 <label for="category">Category</label>
-                <input type="text" formControlName="category" placeholder="category" name="category" class="form-control" id="category">
+                <input type="text" formControlName="category" placeholder="Category" name="category" class="form-control" id="category" required>
+                <div *ngIf="category.invalid && submitted" class="invalid-feedback">
+                    <div *ngIf="category.errors.required">Category is required.</div> 
+                  </div>
               </div>
       
           <div class="form-group">
             <label for="amountSpent">Amount Spent:</label>
-            <input type="number" formControlName="amountSpent" placeholder="amountSpent" name="amountSpent" class="form-control" id="amountSpent">
+            <input type="number" formControlName="amountSpent" placeholder="Amount Spent" name="amountSpent" class="form-control" id="amountSpent" required>
+            <div *ngIf="amountSpent.invalid && submitted" class="invalid-feedback">
+                <div *ngIf="amountSpent.errors.required">Amount spent is required.</div> 
+              </div>
           </div>
+
+          <div class="form-group">
+              <label for="details">Details:</label>
+              <input type="text" formControlName="details" placeholder="Details" name="details" class="form-control" id="details">
+            </div>
+
           <button class="btn btn-success">Save</button>
         </form>
       </div>

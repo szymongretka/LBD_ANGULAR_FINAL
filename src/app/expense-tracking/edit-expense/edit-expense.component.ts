@@ -33,7 +33,8 @@ export class EditExpenseComponent implements OnInit {
       id: [],
       description: ['', Validators.required],
       amountSpent: ['', Validators.required],
-      category: ['', Validators.required]
+      category: ['', Validators.required],
+      details: ['']
     });
 
     this.expenseService.getExpenseById(+expenseId)

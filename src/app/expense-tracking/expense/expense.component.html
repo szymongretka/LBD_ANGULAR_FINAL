@@ -7,7 +7,8 @@
           <button class="list-group-item" (click)="onSelectedExpense(expense)"> 
               {{expense.description}},
               {{expense.category}},
-              {{expense.amountSpent}} PLN  </button>
+              {{expense.amountSpent}},
+              {{expense.details}} PLN  </button>
               
           <!--<a routerLink="" (click)="onSelectedExpense(expense)">  
             {{expense.description}},
@@ -20,9 +21,10 @@
     
     <div *ngIf="selectedExpense && isClicked">
         <div class="col-md-3">
-          <label for="expenseName">Details:</label><br>
-          <input type="text" id="expenseName" [(ngModel)]="selectedExpense.description" name="expenseName">
-          <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;"> Edit</button>
+          <label for="details">Details:</label><br>
+          <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details"><br>
+          <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
+          <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
         </div>
     </div>
 </div>

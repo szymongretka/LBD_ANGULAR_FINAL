@@ -3,7 +3,8 @@ export interface ExpenseAttrs {
     id: number;
     amountSpent: number; 
     description: string;
-    category: string; 
+    category: string;
+    details: string; 
 
 }
 
@@ -12,7 +13,8 @@ export class Expense {
     id: number;
     amountSpent: number; 
     description: string;
-    category: string; 
+    category: string;
+    details: string;  
 
 	/*constructor($id: number, $name: string, $amount: number) {
 		this.amount = $amount;
@@ -25,6 +27,7 @@ export class Expense {
         this.description = attrs.description;
         this.id = attrs.id;
         this.category = attrs.category;
+        this.details = attrs.details;
     }
 
 }

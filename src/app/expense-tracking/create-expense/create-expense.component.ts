@@ -12,6 +12,7 @@ import { ExpenseAttrs, Expense } from 'src/app/models/expense';
 export class CreateExpenseComponent implements OnInit {
 
   addForm: FormGroup;
+  submitted = false;
   expenseService: ExpenseService;
 
   constructor(private formBuilder: FormBuilder, private router: Router, expenseService: ExpenseService) {
@@ -23,17 +24,27 @@ export class CreateExpenseComponent implements OnInit {
       id: [],
       description: ['', Validators.required],
       amountSpent: ['', Validators.required],
-      category: ['', Validators.required]
+      category: ['', Validators.required],
+      details: ['']
     });
 
   }
 
   onSubmit() {
+    this.submitted = true;
     const result: Expense = Object.assign({}, this.addForm.value);
+    if (this.addForm.invalid) {
+      return;
+    }
 
     this.expenseService.createExpense(result).subscribe( data => {
         this.router.navigate(['/expenses']);
       });
   }
+
+  get description() { return this.addForm.get('description'); }
+  get amountSpent() { return this.addForm.get('amountSpent'); }
+  get category() { return this.addForm.get('category'); }
+  get details() { return this.addForm.get('details'); }
 
 }
