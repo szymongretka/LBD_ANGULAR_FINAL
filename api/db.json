@@ -2,16 +2,16 @@
   "expenses": [
     {
       "id": 3,
-      "description": "sr",
+      "description": "aaa",
       "amountSpent": 300,
       "category": "Household",
-      "details": "cos"
+      "details": "oss"
     },
     {
       "id": 4,
-      "description": "Sample expense description",
-      "category": "Commute",
+      "description": "ssss aaaa",
       "amountSpent": 400,
+      "category": "Commute",
       "details": "cos"
     },
     {
@@ -29,18 +29,25 @@
       "details": "cos"
     },
     {
-      "id": 8,
-      "description": "proba validacji",
       "amountSpent": 4,
+      "description": "proba validacji",
+      "id": 8,
       "category": "asdasd",
-      "details": ""
+      "details": "asd"
     },
     {
       "id": 9,
-      "description": "tt",
+      "description": "bb",
       "amountSpent": 5,
       "category": "Household",
       "details": ""
+    },
+    {
+      "id": 10,
+      "description": "io",
+      "amountSpent": 44,
+      "category": "ca",
+      "details": "cos"
     }
   ]
 }

@@ -56,4 +56,12 @@ export class ExpenseComponent implements OnInit {
     window.localStorage.setItem("editExpenseId", expense.id.toString());
     this.router.navigate(['/edit-expense/']);
   };
+
+  saveDetails(expense: Expense): void{
+    this.expenseService.updateExpense(expense).subscribe();
+  }
+
+  downloadList(): void{
+    this.expenseService.saveList(this.expenses);
+  }
 }

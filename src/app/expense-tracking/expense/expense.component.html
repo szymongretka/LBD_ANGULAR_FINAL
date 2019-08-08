@@ -1,20 +1,14 @@
 <h2>My Expenses</h2>
 <div class="container">
     <button class="btn btn-success" style="width:100px" (click)="addExpense()"> Add Expense </button><br>
-    <div class="row" *ngFor="let expense of expenses">
+    <button class="btn btn-success" style="width:200px" (click)="downloadList()"> Download List of Expenses </button>
+    <div class="row" *ngFor="let expense of expenses | sort:'description':'asc'">
       <div class="col-md-3">
         <ul class="list-group">
           <button class="list-group-item" (click)="onSelectedExpense(expense)"> 
-              {{expense.description}},
+              {{expense.description | uppercase}},
               {{expense.category}},
-              {{expense.amountSpent}},
-              {{expense.details}} PLN  </button>
-              
-          <!--<a routerLink="" (click)="onSelectedExpense(expense)">  
-            {{expense.description}},
-            {{expense.category}},
-            {{expense.amountSpent}} PLN 
-          </a>-->
+              {{expense.amountSpent}} PLN </button>
         </ul>
       </div>
     </div>
@@ -23,6 +17,7 @@
         <div class="col-md-3">
           <label for="details">Details:</label><br>
           <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details"><br>
+          <button class="btn btn-success" (click)="saveDetails(selectedExpense)" style="margin-left: 20px;">Save</button>
           <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
           <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
         </div>

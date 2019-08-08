@@ -14,6 +14,7 @@ import { ServicesModule } from './services/services.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateExpenseComponent } from './expense-tracking/create-expense/create-expense.component';
 import { EditExpenseComponent } from './expense-tracking/edit-expense/edit-expense.component';
+import { SortPipe } from './pipes/SortPipe';
 
 @NgModule({
   declarations: [AppComponent],

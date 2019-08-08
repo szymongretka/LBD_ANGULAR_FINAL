@@ -47,12 +47,8 @@ export class EditExpenseComponent implements OnInit {
     this.expenseService.updateExpense(this.editForm.value)
       .pipe(first())
       .subscribe(
-        data => {
-          this.router.navigate(['expenses']);
-        },
-        error => {
-          alert(error);
-        });
+        next => {this.router.navigate(['expenses']);},
+        error => {alert("can't update expense!");});
   }
 
 }

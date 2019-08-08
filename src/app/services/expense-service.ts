@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {map} from 'rxjs/operators';
 import { Expense, ExpenseAttrs } from '../models/expense';
+import { saveAs } from 'file-saver';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpenseService {
-
 
   constructor(private http: HttpClient) { }
   baseUrl: string = '/api/expenses/';
@@ -33,6 +33,17 @@ export class ExpenseService {
 
   deleteExpense(id: number): Observable<Expense> {
     return this.http.delete<Expense>(this.baseUrl + id);
+  }
+
+  saveList(expenses: Expense[]) {
+    const replacer = (key, value) => value === null ? '' : value;
+    const header = Object.keys(expenses[0]);
+    let csv = expenses.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','));
+    csv.unshift(header.join(','));
+    let csvArray = csv.join('\r\n');
+
+    var blob = new Blob([csvArray], {type: 'text/csv' })
+    saveAs(blob, "expenses.csv");
   }
 
 

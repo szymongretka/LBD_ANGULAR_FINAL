@@ -9,11 +9,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateExpenseComponent } from './create-expense/create-expense.component';
 import { DeleteExpenseComponent } from './delete-expense/delete-expense.component';
 import { EditExpenseComponent } from './edit-expense/edit-expense.component';
+import { SortPipe } from '../pipes/SortPipe';
 
 
 @NgModule({
   declarations: [ExpenseComponent, ExpenseDetailComponent, CreateExpenseComponent, 
-    DeleteExpenseComponent, EditExpenseComponent],
+    DeleteExpenseComponent, EditExpenseComponent, SortPipe],
   imports: [
     CommonModule,
     ExpenseTrackingRoutingModule,

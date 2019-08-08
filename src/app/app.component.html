@@ -1,5 +1,16 @@
+<body>
+ <ul class="nav nav-pills nav-justified">
+ <li class="nav-item">
+ <a [routerLink]="['/']" class="navbar-link">Default</a>
+ </li>
+ <li class="nav-item">
+ <a [routerLink]="['/expenses']" class="navbar-link">My Expenses</a>
+ </li>
+ <li class="nav-item">
+ <a [routerLink]="['/contact']" class="navbar-link">Contact</a>
+ </li>
+ 
+ </ul>
+ 
+</body>
 <router-outlet></router-outlet>
-<ul class="nav navbar-nav">
-        <li><a [routerLink]="['/expenses']" class="navbar-link">Expenses</a></li>
-        <li><a [routerLink]="['/contact']" class="navbar-link">Contact</a></li>
-      </ul>
