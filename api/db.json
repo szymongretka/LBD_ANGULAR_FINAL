@@ -36,9 +36,9 @@
       "details": "cos"
     },
     {
-      "amountSpent": 0,
-      "description": "Angular",
       "id": 18,
+      "description": "Angular",
+      "amountSpent": 0,
       "category": "Programmin",
       "details": "asddasdasd"
     },
@@ -55,6 +55,13 @@
       "amountSpent": 300,
       "category": "Furniture",
       "details": "stół"
+    },
+    {
+      "id": 25,
+      "description": "Yeti",
+      "amountSpent": 8,
+      "category": "Other",
+      "details": ""
     }
   ]
 }
