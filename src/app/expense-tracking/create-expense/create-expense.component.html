@@ -13,8 +13,8 @@
           <div class="form-group">
                 <label for="category">Category</label>
                 <input type="text" formControlName="category" placeholder="Category" name="category" class="form-control" id="category" required>
-                <div *ngIf="category.invalid && submitted" class="invalid-feedback">
-                    <div *ngIf="category.errors.required">Category is required.</div> 
+                <div *ngIf="category.invalid && submitted" class="invalid-feedback"> <!--nie działa ta klasa invalid feedback-->
+                    <div *ngIf="category.errors.required">Category is required.</div> <!--walidacja działa, jest wyświetlana, ale nie "wystylowana"-->
                   </div>
               </div>
       

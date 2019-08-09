@@ -14,12 +14,20 @@ export class ExpenseComponent implements OnInit {
   expenses: Expense[];
   subscribedExpenses: Subscription;
 
-  isClicked = false;
   selectedExpense: Expense;
   expenseService: ExpenseService;
   onSelectedExpense(expense: Expense): void {
-    this.isClicked = !this.isClicked;
     this.selectedExpense = expense;
+  }
+
+  clicked: boolean = false;
+  isClicked(expense: Expense): boolean {
+    this.clicked = !this.clicked;
+    if(this.clicked){
+      return true;
+    } else {
+      return false;
+    }
   }
 
   constructor(private router: Router, expenseService: ExpenseService) { 
@@ -27,10 +35,7 @@ export class ExpenseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.subscribedExpenses = this.expenseService.getExpenses().subscribe({
-      next: (expenses) => this.expenses = expenses,
-      error: () => alert('Could not get any expenses')
-    });
+    this.getExpenses();
   }
    
 
@@ -38,6 +43,13 @@ export class ExpenseComponent implements OnInit {
     if(this.subscribedExpenses !== null){
       this.subscribedExpenses.unsubscribe();
     }
+  }
+
+  getExpenses(){
+    this.subscribedExpenses = this.expenseService.getExpenses().subscribe({
+      next: (expenses) => this.expenses = expenses,
+      error: () => alert('Could not get any expenses')
+    });
   }
 
   addExpense(): void {
@@ -64,4 +76,5 @@ export class ExpenseComponent implements OnInit {
   downloadList(): void{
     this.expenseService.saveList(this.expenses);
   }
+
 }

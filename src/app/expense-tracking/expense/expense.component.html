@@ -1,25 +1,44 @@
-<h2>My Expenses</h2>
 <div class="container">
-    <button class="btn btn-success" style="width:100px" (click)="addExpense()"> Add Expense </button><br>
-    <button class="btn btn-success" style="width:200px" (click)="downloadList()"> Download List of Expenses </button>
+    <h2 class="text-center">My Expenses</h2>
+    <button class="btn btn-success" style="width:120px" (click)="addExpense()"> Add Expense </button><br>
+    <div class="divider"></div>
+    <button id="download" class="btn btn-success" style="width:200px" (click)="downloadList()"> Download List of Expenses </button>
+
     <div class="row" *ngFor="let expense of expenses | sort:'description':'asc'">
       <div class="col-md-3">
         <ul class="list-group">
-          <button class="list-group-item" (click)="onSelectedExpense(expense)"> 
-              {{expense.description | uppercase}},
-              {{expense.category}},
+          <button class="list-group-item" (click)="onSelectedExpense(expense)" style="width:600px"> 
+              <b>{{expense.description | uppercase}}</b><br>
+              {{expense.category}}<br>
               {{expense.amountSpent}} PLN </button>
+              <!---->
+              <div *ngIf="selectedExpense && selectedExpense.id === expense.id">
+                  <div class="col-md-3">
+                    <label for="details">Details:</label><br>
+                    <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details" size="100">
+         
+                    <button class="btn btn-success" (click)="saveDetails(selectedExpense)" style="margin-left: 20px;">Save</button>
+                    <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
+                    
+                  </div>
+              </div>
+
+
+
         </ul>
       </div>
     </div>
     
-    <div *ngIf="selectedExpense && isClicked">
+    <!--<div *ngIf="selectedExpense && isClicked">
         <div class="col-md-3">
           <label for="details">Details:</label><br>
-          <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details"><br>
+          <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details" size="100">
+          <div class="divider"></div>
           <button class="btn btn-success" (click)="saveDetails(selectedExpense)" style="margin-left: 20px;">Save</button>
           <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
           <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
+          
         </div>
-    </div>
+    </div>-->
 </div>

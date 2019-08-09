@@ -2,52 +2,59 @@
   "expenses": [
     {
       "id": 3,
-      "description": "aaa",
-      "amountSpent": 300,
-      "category": "Household",
-      "details": "oss"
+      "description": "Aston",
+      "amountSpent": 30000,
+      "category": "Car",
+      "details": "super car"
     },
     {
-      "id": 4,
-      "description": "ssss aaaa",
-      "amountSpent": 400,
-      "category": "Commute",
-      "details": "cos"
-    },
-    {
-      "id": 6,
-      "description": "proba",
-      "amountSpent": 4,
-      "category": "pierwsza",
-      "details": "cos"
-    },
-    {
-      "id": 7,
-      "description": "drugi",
-      "amountSpent": 4,
-      "category": "ta",
-      "details": "cos"
-    },
-    {
-      "amountSpent": 4,
-      "description": "proba validacji",
-      "id": 8,
-      "category": "asdasd",
-      "details": "asd"
-    },
-    {
-      "id": 9,
-      "description": "bb",
-      "amountSpent": 5,
+      "id": 13,
+      "description": "Bravo",
+      "amountSpent": 55,
       "category": "Household",
       "details": ""
     },
     {
-      "id": 10,
-      "description": "io",
-      "amountSpent": 44,
-      "category": "ca",
+      "id": 15,
+      "description": "Cydr",
+      "amountSpent": 2,
+      "category": "Drink",
+      "details": ""
+    },
+    {
+      "id": 16,
+      "description": "ZSerie",
+      "amountSpent": 3000,
+      "category": "Car",
+      "details": ""
+    },
+    {
+      "id": 17,
+      "description": "Kolejny wydatek",
+      "amountSpent": 55,
+      "category": "Other",
       "details": "cos"
+    },
+    {
+      "amountSpent": 0,
+      "description": "Angular",
+      "id": 18,
+      "category": "Programmin",
+      "details": "asddasdasd"
+    },
+    {
+      "id": 23,
+      "description": "Cat",
+      "amountSpent": 55,
+      "category": "Household",
+      "details": ""
+    },
+    {
+      "id": 24,
+      "description": "Table",
+      "amountSpent": 300,
+      "category": "Furniture",
+      "details": "stół"
     }
   ]
 }

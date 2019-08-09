@@ -1,0 +1,14 @@
+#container {
+    position: relative;
+}
+#download {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: auto;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
