@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateExpenseComponent } from './expense-tracking/create-expense/create-expense.component';
 import { EditExpenseComponent } from './expense-tracking/edit-expense/edit-expense.component';
 import { SortPipe } from './pipes/SortPipe';
+import { DefaultTrackingModule } from './default-tracking/default-tracking.module';
+import { DefaultComponent } from './default-tracking/default/default.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +26,7 @@ import { SortPipe } from './pipes/SortPipe';
     ReactiveFormsModule,
     ContactTrackingModule,
     ExpenseTrackingModule,
+    DefaultTrackingModule,
     AppRoutingModule,
     ServicesModule,
     HttpClientModule,
@@ -32,7 +36,8 @@ import { SortPipe } from './pipes/SortPipe';
       {path: 'contact', component: ContactComponent},
       {path: 'expenses/:id', component: ExpenseDetailComponent},
       {path: 'create-expense', component: CreateExpenseComponent},
-      {path: 'edit-expense', component: EditExpenseComponent}
+      {path: 'edit-expense', component: EditExpenseComponent},
+      {path: '', component: DefaultComponent}
     ])
 
   ],

@@ -5,7 +5,7 @@
           <div class="form-group">
             <label for="description">Expense description:</label>
             <input type="text" formControlName="description" placeholder="Description" name="description" class="form-control" id="description" required>
-            <div *ngIf="description.invalid && submitted" class="invalid-feedback">
+            <div *ngIf="description.invalid && submitted" class="text-danger">
                 <div *ngIf="description.errors.required">Description is required.</div> 
               </div>
           </div>
@@ -13,7 +13,7 @@
           <div class="form-group">
                 <label for="category">Category</label>
                 <input type="text" formControlName="category" placeholder="Category" name="category" class="form-control" id="category"  required>
-                <div *ngIf="category.invalid && submitted" class="invalid-feedback"> <!--nie działa ta klasa invalid feedback-->
+                <div *ngIf="category.invalid && submitted" class="text-danger"> <!--nie działa ta klasa invalid feedback-->
                     <div *ngIf="category.errors.required">Category is required.</div> <!--walidacja działa, jest wyświetlana, ale nie "wystylowana"-->
                   </div>
               </div>
@@ -21,7 +21,7 @@
           <div class="form-group">
             <label for="amountSpent">Amount Spent:</label>
             <input type="number" formControlName="amountSpent" placeholder="Amount Spent" name="amountSpent" class="form-control" id="amountSpent" required>
-            <div *ngIf="amountSpent.invalid && submitted" class="invalid-feedback">
+            <div *ngIf="amountSpent.invalid && submitted" class="text-danger">
                 <div *ngIf="amountSpent.errors.required">Amount spent is required.</div> 
               </div>
           </div>

@@ -62,6 +62,13 @@
       "amountSpent": 8,
       "category": "Other",
       "details": ""
+    },
+    {
+      "id": 26,
+      "description": "Experiment",
+      "amountSpent": 3,
+      "category": "Other",
+      "details": "ccc"
     }
   ]
 }

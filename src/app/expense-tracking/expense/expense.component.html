@@ -13,14 +13,14 @@
               {{expense.amountSpent}} PLN </button>
               <!---->
               <div *ngIf="selectedExpense && selectedExpense.id === expense.id">
-                  <div class="col-md-3">
+                  <div>
                     <label for="details">Details:</label><br>
                     <input type="text" id="details" [(ngModel)]="selectedExpense.details" name="details" size="100">
-         
-                    <button class="btn btn-success" (click)="saveDetails(selectedExpense)" style="margin-left: 20px;">Save</button>
-                    <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
-                    <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
-                    
+                    <div class="btn btn-group">
+                      <button class="btn btn-success" (click)="saveDetails(selectedExpense)" style="margin-left: 20px;">Save</button>
+                      <button class="btn btn-success" (click)="editExpense(selectedExpense)" style="margin-left: 20px;">Edit</button>
+                      <button class="btn btn-danger" (click)="deleteExpense(selectedExpense)" style="margin-left: 20px;">Delete</button>
+                    </div>
                   </div>
               </div>
 
